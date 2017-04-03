@@ -19,7 +19,7 @@
 /* Function Prototypes */
 void Usage(char *info[]);
 void GetOptions(char *argv[]);
-void PrintOptions(char *select);
+void PrintOptions(char *select, char str[MAX]);
 /* Main Program */
 int main(int argc, char *argv[])
 {
@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 		Usage(argv);
 	}
 	GetOptions(argv);
+//	PrintOptions(select, &str[MAX]);
 	return 0;
 }
 /* Function Defenitions */
@@ -83,6 +84,26 @@ void GetOptions(char *argv[])
 }	
 	return;
 }
-/*void PrintOptions(char *select)
+/*void PrintOptions(char *select, char str[MAX])
+{
+	char str1[MAX];
+	int j = 0;
+	switch(pos)
+	{
+		case'p':
+			puts(str1);
+			break;
+		case'l':
+			while(str1[j] != '\0')
+			{
+				str1[j] = tolower(str1[j]);
+				j++;
+			}
+			break;
+		case 'u':
+			while(str1[j] != '\0')
+			{
+				str1[j] = toupper(str1[j]);
+			}
 	return;
 }*/
