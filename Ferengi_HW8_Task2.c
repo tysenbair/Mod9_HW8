@@ -47,7 +47,7 @@ void GetOptions(char *argv[])
 	int i = 0;
 	char str1[MAX];
 	char str2[MAX];
-	float pos;
+	double pos;
 	if(strcmp(argv[1], "-p") == 0|| strcmp(argv[1], "-u") == 0||strcmp(argv[1], "-l") == 0) 
 	{
 		printf("Selecting Option [%s]\n", argv[1]);
@@ -58,7 +58,7 @@ void GetOptions(char *argv[])
 	}
 	printf("Type input. Output will be based on option.\n");
 	printf("Enter Ctrl-D to stop user input: ");
-	while(scanf("%f", &pos) != EOF)
+	while(scanf("%lf", &pos) != EOF)
 {
 	while((str1[i++] = getchar()) != '\n');
 	{
@@ -66,11 +66,11 @@ void GetOptions(char *argv[])
 		{
 			if(strcmp(argv[1], "-u") == 0)
 			{
-				str2[i] = isupper(str1[i]);
+				str2[i] = toupper(str1[i]);
 			}
 			else if(strcmp(argv[1], "-l") == 0)
 			{
-				str2[i] = islower(str1[i]);
+				str2[i] = tolower(str1[i]);
 			}
 			else
 			{
