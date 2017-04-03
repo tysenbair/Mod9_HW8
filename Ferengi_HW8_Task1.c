@@ -26,11 +26,11 @@ int main(int argc, char *argv[])
 	char *begin = 0;
 	do
 	{ 
-	//	if(argv[0] string itoa(int) == '-')
-	//	{
-	//		Help();
-	//		exit(1);
-	//	}		
+		if(argc > 1 && strcmp(argv[1], "--help") == 0)
+		{
+			Help();
+			exit(1);
+		}		
 		if(argc != 3)
 		{	
 			Usage();
