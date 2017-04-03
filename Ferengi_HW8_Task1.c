@@ -43,7 +43,6 @@ int main(int argc, char *argv[])
 			printf("\n %s is inside %s. \n Returned string %s\n", argv[2], argv[1], begin);
 		
 			else printf("\n %s is not found in %s. \n", argv[2], argv[1] );
-
 			break;
 	}
 	while(1);
